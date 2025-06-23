@@ -2,7 +2,6 @@
 
 An automated **attendance system** that leverages **Face Recognition** using Python, OpenCV, and Deep Learning. This system captures real-time video, recognizes faces, and logs attendance efficiently in a **MySQL** database.
 
-![Face Recognition Banner](https://user-images.githubusercontent.com/placeholder/banner.jpg) <!-- Add your own image URL or remove this line -->
 
 ---
 
