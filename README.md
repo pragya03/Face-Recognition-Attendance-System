@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# 🎓 Face Recognition Attendance System
-
-An automated **attendance system** that leverages **Face Recognition** using Python, OpenCV, and Deep Learning. This system captures real-time video, recognizes faces, and logs attendance efficiently in a **MySQL** database.
-
-
----
-
-=======
 # Face Recognition Attendance System
 
 An automated **attendance system** that leverages **Face Recognition** using Python, OpenCV, and Deep Learning. This system captures real-time video, recognizes faces, and logs attendance efficiently in a **MySQL** database.
