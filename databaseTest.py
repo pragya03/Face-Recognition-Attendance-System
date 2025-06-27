@@ -1,6 +1,6 @@
 import mysql.connector
 
-conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
 cursor = conn.cursor()
 
 cursor.execute("show databases")

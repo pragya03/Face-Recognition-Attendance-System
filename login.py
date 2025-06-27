@@ -91,11 +91,11 @@ class Login:
     def login(self):
         if (self.txtuser.get()=="" or self.txtpwd.get()==""):
             messagebox.showerror("Error","All Field Required!")
-        elif(self.txtuser.get()=="saumya" and self.txtpwd.get()=="somu"):
+        elif(self.txtuser.get()=="Pragya" and self.txtpwd.get()=="somu"):
             messagebox.showinfo("Successfully","Welcome to Attendance Managment System Using Facial Recognition")
         else:
             # messagebox.showerror("Error","Please Check Username or Password !")
-            conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+            conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
             mycursor = conn.cursor()
             mycursor.execute("select * from register where email=%s and password=%s",(
                 self.txtuser.get(),
@@ -124,7 +124,7 @@ class Login:
         elif(self.new_pwd.get()==""):
             messagebox.showerror("Error","Please Enter the New Password!",parent=self.root2)
         else:
-            conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+            conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
             mycursor = conn.cursor()
             query=("select * from register where email=%s and securityQ=%s and securityA=%s")
             value=(self.txtuser.get(),self.combo_security.get(),self.txtpwd.get())
@@ -149,7 +149,7 @@ class Login:
         if self.txtuser.get()=="":
             messagebox.showerror("Error","Please Enter the Email ID to reset Password!")
         else:
-            conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+            conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
             mycursor = conn.cursor()
             query=("select * from register where email=%s")
             value=(self.txtuser.get(),)
@@ -217,7 +217,7 @@ class Register:
         self. var_cpwd=StringVar()
         self.var_check=IntVar()
 
-        self.bg=ImageTk.PhotoImage(file=r"C:\Users\SAUMYA SALONI\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\bgReg.jpg")
+        self.bg=ImageTk.PhotoImage(file=r"C:\Users\PRAGYA\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\bgReg.jpg")
         
         lb1_bg=Label(self.root,image=self.bg)
         lb1_bg.place(x=0,y=0, relwidth=1,relheight=1)
@@ -327,7 +327,7 @@ class Register:
         else:
             # messagebox.showinfo("Successfully","Successfully Register!")
             try:
-                conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                 mycursor = conn.cursor()
                 query=("select * from register where email=%s")
                 value=(self.var_email.get(),)

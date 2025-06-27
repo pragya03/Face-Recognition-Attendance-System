@@ -76,7 +76,7 @@ class Helpsupport:
     
     def linkedin(self):
         self.new = 1
-        self.url = "linkedin.com/in/saumya-saloni-32418b212"
+        self.url = "linkedin.com/in/saloni-32418b212"
         webbrowser.open(self.url,new=self.new)
     
     def instagram(self):

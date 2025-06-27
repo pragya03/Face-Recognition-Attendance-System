@@ -33,7 +33,7 @@ class Student:
     # This part is image labels setting start
         # first header image
         img = Image.open(
-            r"C:\Users\SAUMYA SALONI\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\banner.jpg")
+            r"C:\Users\PRAGYA\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\banner.jpg")
         img = img.resize((1366, 130), Image.ANTIALIAS)
         self.photoimg = ImageTk.PhotoImage(img)
 
@@ -43,7 +43,7 @@ class Student:
 
         # backgorund image
         bg1 = Image.open(
-            r"C:\Users\SAUMYA SALONI\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\bg3.jpg")
+            r"C:\Users\PRAGYA\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\bg3.jpg")
         bg1 = bg1.resize((1366, 768), Image.ANTIALIAS)
         self.photobg1 = ImageTk.PhotoImage(bg1)
 
@@ -275,7 +275,7 @@ class Student:
         right_frame.place(x=680, y=10, width=660, height=480)
 
         img_right = Image.open(
-            r"C:\Users\SAUMYA SALONI\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\cllg.jpg")
+            r"C:\Users\PRAGYA\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\cllg.jpg")
         img_right = img_right.resize((800, 130), Image.ANTIALIAS)
         self.photoimg_right = ImageTk.PhotoImage(img_right)
 
@@ -347,7 +347,7 @@ class Student:
         else:
             try:
                 conn = mysql.connector.connect(
-                    host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                    host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                 mycursor = conn.cursor()
                 mycursor.execute("insert into student values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
                     self.var_dep.get(),
@@ -381,7 +381,7 @@ class Student:
 
     def fetch_data(self):
         conn = mysql.connector.connect(
-            host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+            host='localhost', username='root', password='@Pragya18', database='face_recognizer')
         mycursor = conn.cursor()
         mycursor.execute("select * from student")
         data = mycursor.fetchall()
@@ -429,7 +429,7 @@ class Student:
                     "Update", "Do you want to Update this Student Details", parent=self.root)
                 if Update > 0:
                     conn = mysql.connector.connect(
-                        host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                        host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                     mycursor = conn.cursor()
                     mycursor.execute("Update Student Set Dep=%s,course=%s,Year=%s,Semester=%s,Name=%s,Division=%s,Roll=%s,Gender=%s,Dob=%s,Email=%s,Phone=%s,Address=%s,Teacher=%s,PhotoSample=%s where Student_id=%s", (
 
@@ -470,7 +470,7 @@ class Student:
             try:
                 delete=messagebox.askyesno("Delete","Do you want to Delete?",parent=self.root)
                 if delete>0:
-                    conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                    conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                     mycursor = conn.cursor() 
                     sql="delete from student where Student_ID=%s"
                     val=(self.var_std_id.get(),)
@@ -513,7 +513,7 @@ class Student:
             messagebox.showerror("Error","Please Fill All Fields are Required!",parent=self.root)
         else:
             try:
-                conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                 mycursor = conn.cursor()
                 mycursor.execute("select * from student")
                 myreslut = mycursor.fetchall()

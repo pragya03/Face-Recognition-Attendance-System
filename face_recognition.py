@@ -23,7 +23,7 @@ class Face_Recognition:
         
         # This part is image labels setting start 
         # first header image  
-        img=Image.open(r"C:\Users\SAUMYA SALONI\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\banner.jpg")
+        img=Image.open(r"C:\Users\PRAGYA\Desktop\Python-FYP-Face-Recognition-Attendence-System-master\Images_GUI\banner.jpg")
         img=img.resize((1366,130),Image.ANTIALIAS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -88,7 +88,7 @@ class Face_Recognition:
 
                 confidence=int((100*(1-predict/300)))
 
-                conn = mysql.connector.connect(host='localhost', username='root', password='@Saumya18', database='face_recognizer')
+                conn = mysql.connector.connect(host='localhost', username='root', password='@Pragya18', database='face_recognizer')
                 cursor = conn.cursor()
 
                 cursor.execute("select Name from student where Student_id="+str(id))
